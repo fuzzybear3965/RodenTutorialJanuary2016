@@ -16,5 +16,5 @@ function turnMeRed() {
 }
 
 function turnMeBlackSlowly() {
-   this.animate([{ color: "blue"},{ color: "black" }], 2000);
+   this.animate([{ color: "blue"},{ color: "black" }] , {fill: "forwards", duration: 2000});
 }
