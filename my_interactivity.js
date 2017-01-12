@@ -6,8 +6,15 @@ for (var i = 0; i < pretty_texts.length; i++) {
    if (i == 0) {
       pretty_text.addEventListener("click", turnMeRed);
    }
+   if (i == 1) {
+      pretty_text.addEventListener("click", turnMeBlackSlowly);
+   }
 }
 
 function turnMeRed() {
    this.style.color = "red";
+}
+
+function turnMeBlackSlowly() {
+   this.animate([{ color: "blue"},{ color: "black" }], 2000);
 }
