@@ -6,3 +6,9 @@ h1 {
 .black {
    color: black;
 }
+
+.pretty-text {
+   color: rgba(120,200,100,.8);
+   font-weight: bold;
+   font-size: 42px;
+}
