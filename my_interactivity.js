@@ -24,7 +24,18 @@ function turnMeBlackSlowly() {
 }
 
 function turnMeUpsideDown() {
-   if (this.className.search("rotate180") == -1) {
-      this.classList.add("rotate180");
+   var element_style = window.getComputedStyle(this, null);
+   var transform_matrix = element_style.getPropertyValue("transform");
+
+   if (transform_matrix == "none") {
+      this.style.transform = "rotate(90deg)";
+   } else {
+      values = transform_matrix.split('(')[1];
+      values = values.split(')')[0]
+      values = values.split(',');
+      var degrees_rotated = Math.abs(values[1]) == 1 ? Math.asin(values[1])*180/Math.PI : Math.acos(values[0])*180/Math.PI ;
+      // Update the degrees rotated
+      degrees_rotated = (degrees_rotated + 90) % 360;
+      this.style.transform = "rotate(" + degrees_rotated + "deg)";
    }
 }

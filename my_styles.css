@@ -12,14 +12,3 @@ h1 {
    font-weight: bold;
    font-size: 42px;
 }
-
-.rotate180 {
-   animation: turn_upside_down 2s linear;
-   animation-fill-mode: forwards;
-
-}
-
-@keyframes turn_upside_down {
-   from { transform: rotate(0deg); }
-   to { transform: rotate(180deg); }
-}
