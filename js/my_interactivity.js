@@ -39,6 +39,6 @@ function turnMeUpsideDown() {
       this.style.transform = "rotate(" + degrees_rotated + "deg)";
    }
 
-   var audio = new Audio("meow.mp3");
+   var audio = new Audio("./assets/meow.mp3");
    audio.play();
 }
