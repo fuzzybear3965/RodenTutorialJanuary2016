@@ -11,6 +11,9 @@ for (var i = 0; i < pretty_texts.length; i++) {
    }
 }
 
+var cat_picture = document.getElementById("cat");
+cat_picture.addEventListener("click", turnMeUpsideDown);
+
 function turnMeRed() {
    this.style.color = "red";
 }
@@ -18,4 +21,8 @@ function turnMeRed() {
 function turnMeBlackSlowly() {
    this.animate([{ color: "blue"},{ color: "black" }] , {fill: "forwards", duration: 2000});
    this.removeEventListener("click", turnMeBlackSlowly)
+}
+
+function turnMeUpsideDown() {
+   this.className += " rotate180";
 }
