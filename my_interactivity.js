@@ -24,5 +24,7 @@ function turnMeBlackSlowly() {
 }
 
 function turnMeUpsideDown() {
-   this.className += " rotate180";
+   if (this.className.search("rotate180") == -1) {
+      this.classList.add("rotate180");
+   }
 }
